@@ -58,7 +58,7 @@ void IRAM_ATTR onTimer() {
 
   toggleState = !toggleState;
 
-  
+
   ledcWrite(PWM_CH1, toggleState ? 255 : 0);
   ledcWrite(PWM_CH2, toggleState ? 0   : 255);
   ledcWrite(PWM_CH3, toggleState ? 255 : 0);

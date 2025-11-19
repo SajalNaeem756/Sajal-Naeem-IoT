@@ -62,15 +62,15 @@ void setup() {
 //  Loop
 void loop() {
   bool btnState = digitalRead(BUTTON_PIN);
+// btn state =low;
 
-
-  if (!btnState && !buttonPressed) {
-    buttonPressed = true;
+  if (!btnState && !buttonPressed) { // btn state = high 
+    buttonPressed = true;             // btn state actual=low
     pressStartTime = millis();
   }
 
   // Button held down
-  if (buttonPressed && !btnState) {
+  if (buttonPressed && !btnState) {// btn state =high // actual=low
     unsigned long pressDuration = millis() - pressStartTime;
     if (pressDuration > longPressDuration) {
       
@@ -83,7 +83,7 @@ void loop() {
   }
 
   // Button released
-  if (buttonPressed && btnState) {
+  if (buttonPressed && btnState) { 
     unsigned long pressDuration = millis() - pressStartTime;
     buttonPressed = false;
 
