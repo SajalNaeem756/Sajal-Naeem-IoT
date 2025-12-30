@@ -12,7 +12,7 @@ char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 
 // ---------- MQTT ----------
-const char* mqtt_server = "192.168.0.101";
+const char* mqtt_server = "10.13.23.5";
 const int mqtt_port = 1883;
 
 const char* TOPIC_TEMP = "home/lab1/temp";
